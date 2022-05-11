@@ -11,7 +11,7 @@ export class BlogService {
   getUsers() {
     return this._http
       .get('http://localhost/ged/public/api/personnels/Allpers')
-      .pipe(map((res: any) => res.json()));
+      .pipe(map((res: any) => res));
     // map((res: { json: () => any }) => res.json());
   }
 }

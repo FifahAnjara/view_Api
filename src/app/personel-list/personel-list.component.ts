@@ -12,8 +12,8 @@ import { BlogService } from '../blog/blog.service';
   providers: [BlogService],
 })
 export class PersonelListComponent implements OnInit {
-  // personels: Personel[] = [];
-  users: any[] | undefined;
+  personels: Personel[] = [];
+  // users: any[] | undefined;
 
   constructor(
     private route: ActivatedRoute, // private personelService: PersonelService
@@ -22,7 +22,7 @@ export class PersonelListComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getPersonels();
-    this.blogService.getUsers().subscribe();
+    this.blogService.getUsers().subscribe((data) => (this.personels = data));
   }
 
   // getPersonels(): void {
