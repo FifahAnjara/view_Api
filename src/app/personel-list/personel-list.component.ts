@@ -3,27 +3,31 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Personel } from '../model/model';
 import { PersonelService } from '../service/personel.service';
+import { BlogService } from '../blog/blog.service';
 
 @Component({
   selector: 'app-personel-list',
   templateUrl: './personel-list.component.html',
   styleUrls: ['./personel-list.component.css'],
+  providers: [BlogService],
 })
 export class PersonelListComponent implements OnInit {
-  personels: Personel[] = [];
+  // personels: Personel[] = [];
+  users: any[] | undefined;
 
   constructor(
-    private route: ActivatedRoute,
-    private personelService: PersonelService
+    private route: ActivatedRoute, // private personelService: PersonelService
+    private blogService: BlogService
   ) {}
 
   ngOnInit(): void {
-    this.getPersonels();
+    // this.getPersonels();
+    this.blogService.getUsers().subscribe();
   }
 
-  getPersonels(): void {
-    this.personelService
-      .getPersonels()
-      .subscribe((personels) => (this.personels = personels));
-  }
+  // getPersonels(): void {
+  //   this.personelService
+  //     .getPersonels()
+  //     .subscribe((personels) => (this.personels = personels));
+  // }
 }
