@@ -18,7 +18,9 @@ export class PersonelService {
   constructor(private http: HttpClient) {}
 
   /*Get Personnels from the server */
-  getPersonels(): Observable<Personel[]> {
-    return this.http.get<Personel[]>(this.personelUrl + 'personels');
+  getPersonels(): Observable<{ donner: Personel[] }> {
+    return this.http.get<{ donner: Personel[] }>(
+      this.personelUrl + '/api' + '/personnels' + '/Allpers'
+    );
   }
 }

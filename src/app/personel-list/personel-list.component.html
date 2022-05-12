@@ -1,22 +1,36 @@
 <h3>List of Personels</h3>
-<!-- <div>
+<div>
     <a routerLink="/personel/add">Add new Personels</a>
-</div> -->
-<table>
-    <tr>
-        <th>mat</th>
-        <th>password</th>
-        <th>nom</th>
-        <th>prenom</th>
-        <th>email</th>
-        <th>mobile</th>
-        <th>photo</th>
-        <th>fonction</th>
-        <th>direction</th>
-        <th>droit</th>
-    </tr>
-    <!-- <tr *ngFor="let personel of personels">
-        <td>{{personel}}</td>
-    </tr> -->
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">mat</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">mobile</th>
+            <th scope="col">email</th>
+            <th scope="col">photo</th>
+            <th scope="col">adresse</th>
+            <th scope="col">fonction</th>
+            <th scope="col">direction</th>
+            <th scope="col">droit</th>
+            <th scope="col">service</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personel of personels">
+            <th scope="row">{{personel.mat}}</th>
+            <td>{{personel.nom}}</td>
+            <td>{{personel.prenom}}</td>
+            <td>{{personel.mobile}}</td>
+            <td>{{personel.mail}}</td>
+            <td>{{personel.photo}}</td>
+            <td>{{personel.adresse}}</td>
+            <td>{{personel.fonName}}</td>
+            <td>{{personel.nomDir}}</td>
+            <td>{{personel.droit}}</td>
+            <td>{{personel.nomSer}}</td>
+        </tr>
+    </tbody>
 </table>
-{{personels | json}}

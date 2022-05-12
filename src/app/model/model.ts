@@ -1,12 +1,13 @@
-export class Personel {
-  mat!: string;
-  nom: string | undefined;
-  prenom: string | undefined;
-  email: string | undefined;
-  mobile: string | undefined;
-  photo: string | undefined;
-  fonction: string | undefined;
-  direction: string | undefined;
-  service: string | undefined;
-  droit: string | undefined;
+export interface Personel {
+  mat?: string;
+  nom?: string;
+  prenom?: string;
+  mobile?: string;
+  mail?: string;
+  photo?: string;
+  adresse?: string;
+  fonName?: string;
+  nomDir?: string;
+  droit?: string;
+  nomSer?: string;
 }
