@@ -18,6 +18,7 @@ export class PersonelService {
   constructor(private http: HttpClient) {}
 
   /*Get Personnels from the server */
+  /**"donner" == cles ana valeur any anaty backend  */
   getPersonels(): Observable<{ donner: Personel[] }> {
     return this.http.get<{ donner: Personel[] }>(
       this.personelUrl + '/api' + '/personnels' + '/Allpers'
