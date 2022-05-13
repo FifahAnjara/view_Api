@@ -1,1 +1,34 @@
-<p>personel-detail works!</p>
+<h3>Detail of personel</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">mat</th>
+            <th scope="col">nom</th>
+            <th scope="col">pernom</th>
+            <th scope="col">mail</th>
+            <th scope="col">photo</th>
+            <th scope="col">mobile</th>
+            <th scope="col">fonction</th>
+            <th scope="col">adresse</th>
+            <th scope="col">direction</th>
+            <th scope="col">service</th>
+            <th scope="col">droit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{personel.mat}}</td>
+            <td>{{personel.nom}}</td>
+            <td>{{personel.prenom}}</td>
+            <td>{{personel.mail}}</td>
+            <td>{{personel.photo}}</td>
+            <td>{{personel.mobile}}</td>
+            <td>{{personel.fonction}}</td>
+            <td>{{personel.adresse}}</td>
+            <td>{{personel.direction}}</td>
+            <td>{{personel.service}}</td>
+            <td>{{personel.droit}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="goBack()" type="button" class="btn btn-outline-primary">Go Back</button>

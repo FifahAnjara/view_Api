@@ -23,4 +23,13 @@ export class PersonelService {
       this.personelUrl + '/api' + '/personnels' + '/Allpers'
     );
   }
+
+  /**Get personel by mat.  */
+  getPersonel(mat: string | null): Observable<any> {
+    const url = `${this.personelUrl}/api/personnels/perso/${mat}`;
+    return this.http.get<{
+      status: number;
+      data: {};
+    }>(url);
+  }
 }

@@ -9,7 +9,7 @@ import { PersonelDetailComponent } from './personel-detail/personel-detail.compo
 const routes: Routes = [
   { path: '', redirectTo: '/personels', pathMatch: 'full' },
   { path: 'personels', component: PersonelListComponent },
-  { path: 'personel/id/detail', component: PersonelDetailComponent },
+  { path: 'personel/:mat/detail', component: PersonelDetailComponent },
   { path: 'personel/:id/update', component: PersonelEditComponent },
   { path: 'personel/add', component: PersonelAddComponent },
 ];

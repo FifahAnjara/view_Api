@@ -10,4 +10,7 @@ export interface Personel {
   nomDir?: string;
   droit?: string;
   nomSer?: string;
+  fonction?: string;
+  direction?: string;
+  service?: string;
 }

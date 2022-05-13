@@ -16,6 +16,7 @@
             <th scope="col">direction</th>
             <th scope="col">droit</th>
             <th scope="col">service</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -31,6 +32,10 @@
             <td>{{personel.nomDir}}</td>
             <td>{{personel.droit}}</td>
             <td>{{personel.nomSer}}</td>
+            <td>
+                <button routerLink="/personel/{{personel.mat}}/detail" type="button"
+                    class="btn btn-outline-info">Detail</button>&nbsp;
+            </td>
         </tr>
     </tbody>
 </table>
