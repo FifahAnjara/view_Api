@@ -13,21 +13,19 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class PersonelService {
-  private personelUrl = 'http://localhost/ged/public'; //Base URL REST API
+  private personelUrl = 'http://localhost/ged/public/api/personnels'; //Base URL REST API
 
   constructor(private http: HttpClient) {}
 
   /*Get Personnels from the server */
   /**"donner" == cles ana valeur any anaty backend  */
   getPersonels(): Observable<{ donner: Personel[] }> {
-    return this.http.get<{ donner: Personel[] }>(
-      this.personelUrl + '/api' + '/personnels' + '/Allpers'
-    );
+    return this.http.get<{ donner: Personel[] }>(this.personelUrl + '/Allpers');
   }
 
   /**Get personel by mat.  */
   getPersonel(mat: string | null): Observable<any> {
-    const url = `${this.personelUrl}/api/personnels/perso/${mat}`;
+    const url = `${this.personelUrl}/perso/${mat}`;
     return this.http.get<{
       status: number;
       data: {};
