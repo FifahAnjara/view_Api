@@ -4,30 +4,30 @@
         <tr>
             <th scope="col">mat</th>
             <th scope="col">nom</th>
-            <th scope="col">pernom</th>
-            <th scope="col">mail</th>
-            <th scope="col">photo</th>
+            <th scope="col">prenom</th>
             <th scope="col">mobile</th>
-            <th scope="col">fonction</th>
+            <th scope="col">email</th>
+            <th scope="col">photo</th>
             <th scope="col">adresse</th>
+            <th scope="col">fonction</th>
             <th scope="col">direction</th>
             <th scope="col">service</th>
-            <th scope="col">droit</th>
+
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{personel.mat}}</td>
+        <tr *ngFor="let personel of personel">
+            <th scope="row">{{personel.mat}}</th>
             <td>{{personel.nom}}</td>
             <td>{{personel.prenom}}</td>
+            <td>{{personel.mobile}}</td>
             <td>{{personel.mail}}</td>
             <td>{{personel.photo}}</td>
-            <td>{{personel.mobile}}</td>
-            <td>{{personel.fonction}}</td>
             <td>{{personel.adresse}}</td>
-            <td>{{personel.direction}}</td>
-            <td>{{personel.service}}</td>
-            <td>{{personel.droit}}</td>
+            <td>{{personel.fonName}}</td>
+            <td>{{personel.nomDir}}</td>
+            <td>{{personel.nomSer}}</td>
+
         </tr>
     </tbody>
 </table>

@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./personel-detail.component.css'],
 })
 export class PersonelDetailComponent implements OnInit {
-  personel!: Personel;
+  personel: Personel[] = [];
   constructor(
     private route: ActivatedRoute,
     private personelService: PersonelService,

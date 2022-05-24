@@ -4,8 +4,10 @@ export interface Personel {
   prenom?: string;
   mobile?: string;
   mail?: string;
+  email?: string;
   photo?: string;
   adresse?: string;
+  password?: string;
   fonName?: string;
   nomDir?: string;
   droit?: string;
